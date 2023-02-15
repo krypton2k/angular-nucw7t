@@ -1,0 +1,17 @@
+<h2>My Things</h2>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+
+    <span> ${{ nicePrice(product.price) }} </span>
+  </h3>
+  <p *ngIf="product.description">DESCRIPTION: {{ product.description }}</p>
+
+  <button (click)="share()">Add To List</button>
+
+  <app-product-alerts [product]="product" (smeg)="onNotify()">
+  </app-product-alerts>
+</div>

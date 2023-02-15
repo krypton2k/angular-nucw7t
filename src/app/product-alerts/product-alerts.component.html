@@ -1,0 +1,7 @@
+<p *ngIf="product && product.price > 700 ">
+<button  (click)="smeg.emit()">Notify Me</button>
+</p>
+
+<p *ngIf="product && product.price == 0">
+<button  (click)="smeg.emit()">OOH ITS FREE</button>
+</p>
